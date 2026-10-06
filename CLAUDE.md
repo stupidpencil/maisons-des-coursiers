@@ -53,4 +53,7 @@ pnpm build      # vérifier que le build passe avant de pousser
 
 ## Mise en production
 
-Vercel déploie la branche principale. Il ne sert qu'à la production : on vérifie tout en local avant de fusionner. Variable d'environnement à régler sur Vercel : `NUXT_PUBLIC_CONTACT_EMAIL` (l'adresse du réseau).
+- Dépôt : https://github.com/spirale-coop/maisons-des-coursiers (public, branche `main`).
+- Projet Vercel : `maisons-des-coursiers`, équipe Cascade (`cascade-coop`), production sur https://maisons-des-coursiers.vercel.app. Vercel ne sert qu'à la production : on vérifie tout en local avant de déployer.
+- Tant que Vercel n'est pas relié à GitHub, on déploie en ligne de commande : `npx vercel deploy --prod --scope cascade-coop`. Une fois relié (`vercel git connect`), chaque push sur `main` déploie.
+- Variable d'environnement à régler sur Vercel : `NUXT_PUBLIC_CONTACT_EMAIL` (l'adresse du réseau).
