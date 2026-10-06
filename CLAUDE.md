@@ -53,7 +53,7 @@ pnpm build      # vérifier que le build passe avant de pousser
 
 ## Mise en production
 
-- Dépôt : https://github.com/spirale-coop/maisons-des-coursiers (public, branche `main`).
+- Dépôt : https://github.com/stupidpencil/maisons-des-coursiers (public, branche `main`).
 - Projet Vercel : `maisons-des-coursiers`, équipe Cascade (`cascade-coop`), production sur https://maisons-des-coursiers.vercel.app. Vercel ne sert qu'à la production : on vérifie tout en local avant de déployer.
-- Tant que Vercel n'est pas relié à GitHub, on déploie en ligne de commande : `npx vercel deploy --prod --scope cascade-coop`. Une fois relié (`vercel git connect`), chaque push sur `main` déploie.
+- Vercel est relié à GitHub : chaque push sur `main` déploie en production. En secours, on peut déployer en ligne de commande : `npx vercel deploy --prod --scope cascade-coop`.
 - Variable d'environnement à régler sur Vercel : `NUXT_PUBLIC_CONTACT_EMAIL` (l'adresse du réseau).
