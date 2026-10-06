@@ -1,0 +1,55 @@
+{
+  "site": {
+    "name": "Couriers' Houses",
+    "tagline": "The network of rest and support places for delivery workers"
+  },
+  "nav": {
+    "reseau": "The network",
+    "carte": "Map",
+    "ressources": "Resources",
+    "contact": "Contact",
+    "contacter": "Contact the team",
+    "menu": "Menu"
+  },
+  "footer": {
+    "porteur": "A project run by CoopCycle Association.",
+    "mentions": "Legal notice",
+    "contact": "Contact"
+  },
+  "status": {
+    "open": "Open",
+    "prefiguration": "In preparation"
+  },
+  "map": {
+    "label": "Map of the Couriers' Houses",
+    "all": "All",
+    "open": "Open",
+    "prefiguration": "In preparation",
+    "list": "The network's Houses",
+    "approxCity": "Approximate location: this House does not have an address yet.",
+    "seeSheet": "See the page",
+    "attribution": "Map data © OpenStreetMap contributors"
+  },
+  "maison": {
+    "address": "Address",
+    "hours": "Opening hours",
+    "opened": "Opened",
+    "updated": "Last updated",
+    "back": "All Houses",
+    "help": "A question about this House?",
+    "contact": "Write to the team",
+    "updatedOn": "Last updated: {date}"
+  },
+  "resources": {
+    "back": "All resources",
+    "open": "Read",
+    "openPage": "Open as a page"
+  },
+  "contact": {
+    "address": "Network address",
+    "write": "Write"
+  },
+  "error": {
+    "pageNotFound": "Page not found"
+  }
+}

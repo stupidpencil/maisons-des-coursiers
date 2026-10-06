@@ -1,0 +1,55 @@
+{
+  "site": {
+    "name": "Maisons des coursiers",
+    "tagline": "Le réseau des lieux de repos et de soutien pour les livreurs"
+  },
+  "nav": {
+    "reseau": "Le réseau",
+    "carte": "Carte",
+    "ressources": "Ressources",
+    "contact": "Contact",
+    "contacter": "Contacter l'équipe",
+    "menu": "Menu"
+  },
+  "footer": {
+    "porteur": "Un projet porté par CoopCycle Association.",
+    "mentions": "Mentions légales",
+    "contact": "Contact"
+  },
+  "status": {
+    "open": "Ouverte",
+    "prefiguration": "En préfiguration"
+  },
+  "map": {
+    "label": "Carte des Maisons des coursiers",
+    "all": "Toutes",
+    "open": "Ouvertes",
+    "prefiguration": "En préfiguration",
+    "list": "Les Maisons du réseau",
+    "approxCity": "Emplacement indicatif : la Maison n'a pas encore d'adresse.",
+    "seeSheet": "Voir la fiche",
+    "attribution": "Fond de carte © contributeurs OpenStreetMap"
+  },
+  "maison": {
+    "address": "Adresse",
+    "hours": "Horaires",
+    "opened": "Ouverture",
+    "updated": "Dernière mise à jour",
+    "back": "Toutes les Maisons",
+    "help": "Vous avez une question sur cette Maison ?",
+    "contact": "Écrire à l'équipe",
+    "updatedOn": "Dernière mise à jour : {date}"
+  },
+  "resources": {
+    "back": "Toutes les ressources",
+    "open": "Consulter",
+    "openPage": "Ouvrir sur une page"
+  },
+  "contact": {
+    "address": "Adresse du réseau",
+    "write": "Écrire"
+  },
+  "error": {
+    "pageNotFound": "Page non trouvée"
+  }
+}
