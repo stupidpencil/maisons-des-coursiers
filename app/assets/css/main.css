@@ -83,3 +83,21 @@ html {
 .page-content > :is(p, ul, ol):last-child {
   margin-bottom: 4rem;
 }
+
+/*
+ * Cercle qui pulse autour de l'endroit où appuyer dans les guides. Tailwind centre le
+ * cercle avec la propriété `translate` : l'animation ne touche donc qu'à `scale`
+ * (dans `transform`), depuis le centre du cercle.
+ */
+@keyframes guide-tap-pulse {
+  50% { transform: scale(1.15); }
+}
+
+.guide-tap {
+  transform-origin: center;
+  animation: guide-tap-pulse 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .guide-tap { animation: none; }
+}

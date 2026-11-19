@@ -2,9 +2,36 @@
 const route = useRoute()
 const { t, locale, locales } = useI18n()
 const localePath = useLocalePath()
+const { openContact } = useContactModal()
+
+const footerColumns = computed(() => [
+  {
+    title: t('footer.discover'),
+    links: [
+      { label: t('nav.reseau'), to: localePath('/le-reseau') },
+      { label: t('nav.etude'), to: localePath('/sante-course') },
+      { label: t('footer.map'), to: localePath('/carte') }
+    ]
+  },
+  {
+    title: t('footer.learnMore'),
+    links: [
+      { label: t('nav.ressources'), to: localePath('/ressources') },
+      { label: 'CoopCycle', to: 'https://coopcycle.org', external: true }
+    ]
+  },
+  {
+    title: t('footer.contact'),
+    links: [
+      { label: t('nav.contacter'), contact: '' },
+      { label: t('footer.launch'), contact: t('footer.launchSubject') }
+    ]
+  }
+])
 
 const links = computed(() => [
   { label: t('nav.reseau'), to: localePath('/le-reseau') },
+  { label: t('nav.etude'), to: localePath('/sante-course') },
   { label: t('nav.carte'), to: localePath('/carte') },
   { label: t('nav.ressources'), to: localePath('/ressources') },
   { label: t('nav.contact'), to: localePath('/contact') }
@@ -43,7 +70,7 @@ const localeLink = (code: string) => {
           {{ l.code }}
         </UButton>
         <UColorModeButton class="hidden sm:flex" />
-        <UButton :to="localePath('/contact')" trailing-icon="i-lucide-mail" class="hidden whitespace-nowrap sm:inline-flex">
+        <UButton trailing-icon="i-lucide-mail" class="hidden whitespace-nowrap sm:inline-flex" @click="openContact()">
           {{ t('nav.contacter') }}
         </UButton>
       </template>
@@ -77,21 +104,71 @@ const localeLink = (code: string) => {
       <slot />
     </UMain>
 
+    <ContactModal />
+
     <USeparator />
 
-    <UFooter>
-      <template #left>
-        <p class="text-sm text-muted">
-          © {{ new Date().getFullYear() }} {{ t('site.name') }} — {{ t('footer.porteur') }}
-        </p>
+    <UFooter :ui="{ top: 'border-b border-default' }">
+      <template #top>
+        <UContainer class="py-12 lg:py-16">
+          <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
+            <div>
+              <NuxtLink :to="localePath('/')" :aria-label="t('site.name')">
+                <AppLogo />
+              </NuxtLink>
+              <p class="mt-4 max-w-xs text-sm text-muted text-pretty">
+                {{ t('footer.tagline') }}
+              </p>
+            </div>
+
+            <nav v-for="column in footerColumns" :key="column.title" :aria-label="column.title">
+              <h2 class="text-sm font-semibold text-highlighted">
+                {{ column.title }}
+              </h2>
+              <ul class="mt-4 space-y-3">
+                <li v-for="link in column.links" :key="link.label">
+                  <button
+                    v-if="'contact' in link"
+                    type="button"
+                    class="text-sm text-muted transition-colors hover:text-highlighted"
+                    @click="openContact(link.contact || undefined)"
+                  >
+                    {{ link.label }}
+                  </button>
+                  <ULink
+                    v-else
+                    :to="link.to"
+                    :external="link.external"
+                    :target="link.external ? '_blank' : undefined"
+                    class="text-sm text-muted transition-colors hover:text-highlighted"
+                  >
+                    {{ link.label }}
+                  </ULink>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </UContainer>
       </template>
+
+      <template #left>
+        <div class="flex items-center gap-2">
+          <CoopyleftLogo class="size-4 shrink-0 text-muted" aria-hidden="true" />
+          <p class="text-sm text-muted">
+            {{ t('footer.copyright', { year: new Date().getFullYear() }) }}
+          </p>
+        </div>
+      </template>
+
       <template #right>
-        <UButton :to="localePath('/mentions-legales')" color="neutral" variant="link" size="sm">
-          {{ t('footer.mentions') }}
-        </UButton>
-        <UButton :to="localePath('/contact')" color="neutral" variant="link" size="sm">
-          {{ t('footer.contact') }}
-        </UButton>
+        <nav class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2" :aria-label="t('footer.mentions')">
+          <ULink :to="localePath('/mentions-legales')" class="text-sm text-muted transition-colors hover:text-highlighted">
+            {{ t('footer.mentions') }}
+          </ULink>
+          <ULink :to="localePath('/confidentialite')" class="text-sm text-muted transition-colors hover:text-highlighted">
+            {{ t('footer.privacy') }}
+          </ULink>
+        </nav>
       </template>
     </UFooter>
   </div>

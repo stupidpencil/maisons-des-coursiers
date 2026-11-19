@@ -5,6 +5,7 @@
   },
   "nav": {
     "reseau": "The network",
+    "etude": "The Santé-Course study",
     "carte": "Map",
     "ressources": "Resources",
     "contact": "Contact",
@@ -12,9 +13,16 @@
     "menu": "Menu"
   },
   "footer": {
-    "porteur": "A project run by CoopCycle Association.",
+    "copyright": "{year} Maisons des coursiers — under the Coopyleft licence.",
+    "tagline": "Places of welcome and solidarity for platform delivery workers. A project run by CoopCycle Association.",
+    "discover": "Discover",
+    "learnMore": "Learn more",
+    "map": "Map of the Houses",
+    "launch": "Start a House",
+    "launchSubject": "I want to start a Maison des coursiers",
     "mentions": "Legal notice",
-    "contact": "Contact"
+    "contact": "Contact",
+    "privacy": "Privacy policy"
   },
   "status": {
     "open": "Open",
@@ -51,5 +59,18 @@
   },
   "error": {
     "pageNotFound": "Page not found"
+  },
+  "guide": {
+    "screenOfStep": "Screen for step {n}"
+  },
+  "contactModal": {
+    "title": "Write to the team",
+    "description": "Copy the address and write to us from your email app.",
+    "copy": "Copy",
+    "copiedShort": "Copied",
+    "copied": "Address copied",
+    "subject": "Suggested subject",
+    "openMail": "Open my email app",
+    "safety": "For your safety, do not mention your immigration status in this first message."
   }
 }

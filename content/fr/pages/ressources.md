@@ -6,7 +6,7 @@ description: "Informations et orientations pour les livreurs des plateformes et 
 ::page-hero
 ---
 title: Ressources pour les livreurs et celles et ceux qui les accompagnent
-description: Cinq thèmes, avec les services qu'on peut trouver dans les Maisons et les organisations partenaires.
+description: Les services qu'on trouve dans les Maisons et chez les organisations partenaires, et des guides pas à pas.
 ---
 ::
 

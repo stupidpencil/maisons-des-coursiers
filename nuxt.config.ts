@@ -4,10 +4,16 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css', 'leaflet/dist/leaflet.css'],
+  content: {
+    renderer: {
+      // Les titres ne sont pas des liens d'ancre (pas de « # » au survol).
+      anchorLinks: { h1: false, h2: false, h3: false, h4: false, h5: false, h6: false }
+    }
+  },
   runtimeConfig: {
     public: {
       // Surchargé par NUXT_PUBLIC_CONTACT_EMAIL (voir .env.example et Vercel).
-      contactEmail: 'contact@maisondescoursiers.example'
+      contactEmail: 'mdc@coopcycle.org'
     }
   },
   vite: {

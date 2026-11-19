@@ -5,6 +5,7 @@
   },
   "nav": {
     "reseau": "Le réseau",
+    "etude": "L'étude Santé-Course",
     "carte": "Carte",
     "ressources": "Ressources",
     "contact": "Contact",
@@ -12,9 +13,16 @@
     "menu": "Menu"
   },
   "footer": {
-    "porteur": "Un projet porté par CoopCycle Association.",
+    "copyright": "{year} Maisons des coursiers — sous licence Coopyleft.",
+    "tagline": "Des lieux d'accueil et de solidarité pour les livreurs des plateformes. Un projet porté par CoopCycle Association.",
+    "discover": "Découvrir",
+    "learnMore": "Pour aller plus loin",
+    "map": "Carte des Maisons",
+    "launch": "Lancer une Maison",
+    "launchSubject": "Je veux lancer une Maison des coursiers",
     "mentions": "Mentions légales",
-    "contact": "Contact"
+    "contact": "Contact",
+    "privacy": "Politique de confidentialité"
   },
   "status": {
     "open": "Ouverte",
@@ -51,5 +59,18 @@
   },
   "error": {
     "pageNotFound": "Page non trouvée"
+  },
+  "guide": {
+    "screenOfStep": "Écran de l'étape {n}"
+  },
+  "contactModal": {
+    "title": "Écrire à l'équipe",
+    "description": "Copiez l'adresse et écrivez-nous depuis votre messagerie.",
+    "copy": "Copier",
+    "copiedShort": "Copiée",
+    "copied": "Adresse copiée",
+    "subject": "Objet conseillé",
+    "openMail": "Ouvrir ma messagerie",
+    "safety": "Pour votre sécurité, n'écrivez pas votre situation administrative dans ce premier message."
   }
 }

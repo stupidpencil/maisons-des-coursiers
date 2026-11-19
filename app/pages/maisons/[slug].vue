@@ -2,7 +2,7 @@
 const route = useRoute()
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
-const { mailto } = useMailto()
+const { openContact } = useContactModal()
 
 const slug = computed(() => String(route.params.slug))
 
@@ -84,7 +84,7 @@ const facts = computed(() => {
     </p>
 
     <UPageCard :title="t('maison.help')" variant="subtle" class="mt-10 max-w-3xl">
-      <UButton :to="mailto(`${maison!.name}`)" external trailing-icon="i-lucide-mail" class="w-fit">
+      <UButton trailing-icon="i-lucide-mail" class="w-fit" @click="openContact(maison!.name)">
         {{ t('maison.contact') }}
       </UButton>
     </UPageCard>

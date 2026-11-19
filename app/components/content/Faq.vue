@@ -3,7 +3,7 @@
 // (liste à puces) et `after` (texte sous la liste). Les données structurées
 // FAQPage sont ajoutées pour les moteurs de recherche.
 type Item = { question: string, answer: string, points?: string[], after?: string }
-const props = defineProps<{ title?: string, description?: string, items: Item[] }>()
+const props = defineProps<{ headline?: string, title?: string, description?: string, items: Item[] }>()
 
 const accordion = computed(() => props.items.map((it, i) => ({ label: it.question, value: String(i), slot: 'answer' as const, item: it })))
 
@@ -27,6 +27,9 @@ useHead({
   <section class="band-dark py-16 sm:py-24">
     <UContainer class="grid gap-10 lg:grid-cols-[1fr_2fr]">
       <div>
+        <p v-if="headline" class="mb-3 text-sm font-semibold tracking-wide text-coop-300 uppercase">
+          {{ headline }}
+        </p>
         <h2 class="text-3xl font-bold sm:text-4xl">
           {{ title }}
         </h2>

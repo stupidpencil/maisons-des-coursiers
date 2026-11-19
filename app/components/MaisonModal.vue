@@ -3,7 +3,9 @@
 // affichée (fichier content/data/maisons/<slug>.yml), `null` = modale fermée.
 const slug = defineModel<string | null>('slug', { default: null })
 const { t, locale } = useI18n()
-const { mailto } = useMailto()
+const { openContact } = useContactModal()
+// Dans la modale, le titre de la modale est le h2 : les titres du contenu descendent d'un niveau.
+provide('headingOffset', 1)
 
 const { data: maisons } = await useAsyncData('maisons-data', () =>
   queryCollection('maisons').order('name', 'ASC').all()
@@ -47,6 +49,12 @@ const facts = computed(() => {
     s.m.opened && { icon: 'i-lucide-calendar', label: t('maison.opened'), value: s.m.opened }
   ].filter(Boolean) as { icon: string, label: string, value: string }[]
 })
+
+// La fiche se ferme pour laisser place à la fenêtre de contact.
+function writeAbout(name: string) {
+  slug.value = null
+  openContact(name)
+}
 </script>
 
 <template>
@@ -54,7 +62,7 @@ const facts = computed(() => {
     v-model:open="open"
     :title="selected?.m.name"
     :description="selected?.page?.description"
-    :ui="{ content: 'max-w-2xl max-h-[85dvh] sm:max-h-[85dvh]', body: 'overflow-y-auto' }"
+    :ui="{ content: 'max-w-2xl max-h-[85dvh] sm:max-h-[85dvh]', header: 'shrink-0 items-start py-4 pe-14', title: 'text-2xl font-bold text-balance', body: 'min-h-0 overflow-y-auto', footer: 'shrink-0' }"
   >
     <template #body>
       <template v-if="selected">
@@ -77,7 +85,7 @@ const facts = computed(() => {
         </p>
 
         <div v-if="selected.page" class="mt-6">
-          <ContentRenderer :value="selected.page" />
+          <ContentRenderer :value="shiftHeadings(introAsNote(selected.page), 1)" />
         </div>
         <p v-if="selected.page?.updated" class="mt-6 text-sm text-muted">
           {{ t('maison.updatedOn', { date: updatedLabel }) }}
@@ -87,8 +95,7 @@ const facts = computed(() => {
     <template #footer>
       <UButton
         v-if="selected"
-        :to="mailto(selected.m.name)"
-        external
+        @click="writeAbout(selected.m.name)"
         trailing-icon="i-lucide-mail"
       >
         {{ t('maison.contact') }}

@@ -1,6 +1,6 @@
 <template>
-  <span class="flex items-center gap-2 font-bold">
-    <UIcon name="i-lucide-house" class="size-6 text-primary" />
+  <span class="flex items-center gap-2.5 font-bold">
+    <img src="/logo-mdc.svg" alt="" width="26" height="32" class="h-8 w-auto">
     <span>{{ $t('site.name') }}</span>
   </span>
 </template>

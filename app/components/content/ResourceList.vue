@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const { locale, t } = useI18n()
+// Dans la modale, le titre de la modale est le h2 : les titres du contenu descendent d'un niveau.
+provide('headingOffset', 1)
 
 // Les ressources non encore traduites s'affichent en français.
 const { data: items } = await useAsyncData(() => `resources-list-${locale.value}`, async () => {
@@ -39,11 +41,11 @@ const open = computed({
       v-model:open="open"
       :title="selected?.title"
       :description="selected?.description"
-      :ui="{ content: 'max-w-2xl max-h-[85dvh] sm:max-h-[85dvh]', body: 'overflow-y-auto' }"
+      :ui="{ content: 'max-w-2xl max-h-[85dvh] sm:max-h-[85dvh]', header: 'shrink-0 items-start py-4 pe-14', title: 'text-2xl font-bold text-balance', body: 'min-h-0 overflow-y-auto', footer: 'shrink-0' }"
     >
       <template #body>
         <template v-if="selected">
-          <ContentRenderer :value="selected" />
+          <ContentRenderer :value="shiftHeadings(introAsNote(selected), 1)" />
         </template>
       </template>
     </UModal>

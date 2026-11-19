@@ -2,8 +2,8 @@
 type Cta = { label: string, to?: string, mailSubject?: string, variant?: 'solid' | 'outline' | 'subtle' }
 defineProps<{ title: string, description?: string, ctas: Cta[] }>()
 const localePath = useLocalePath()
-const { mailto } = useMailto()
-const href = (c: Cta) => (c.mailSubject ? mailto(c.mailSubject) : localePath(c.to ?? '/'))
+const { openContact } = useContactModal()
+const href = (c: Cta) => (c.mailSubject ? undefined : localePath(c.to ?? '/'))
 </script>
 
 <template>
@@ -14,7 +14,7 @@ const href = (c: Cta) => (c.mailSubject ? mailto(c.mailSubject) : localePath(c.t
           v-for="c in ctas"
           :key="c.label"
           :to="href(c)"
-          :external="!!c.mailSubject"
+          @click="c.mailSubject && openContact(c.mailSubject)"
           size="lg"
           :variant="c.variant ?? 'solid'"
         >

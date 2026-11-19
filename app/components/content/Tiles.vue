@@ -1,11 +1,11 @@
 <script setup lang="ts">
 // Tuiles rouges à fond plein : icône, titre, court texte.
 type Item = { icon: string, title: string, description: string }
-defineProps<{ title?: string, description?: string, items: Item[] }>()
+defineProps<{ headline?: string, title?: string, description?: string, items: Item[] }>()
 </script>
 
 <template>
-  <UPageSection :title="title" :description="description">
+  <UPageSection :headline="headline" :title="title" :description="description">
     <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       <li
         v-for="item in items"

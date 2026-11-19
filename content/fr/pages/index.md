@@ -5,6 +5,7 @@ description: "Le réseau des Maisons des coursiers et des livreurs : des lieux d
 
 ::page-hero
 ---
+graphic: large
 headline: Un lieu d'accueil et de solidarité pour les livreurs
 title: Les Maisons des coursiers
 description: "Un espace de repos et un centre d'accompagnement pour les livreurs et livreuses des plateformes. Trouvez la Maison la plus proche, ou lancez la vôtre."
@@ -20,6 +21,7 @@ ctas:
 
 ::feature-grid
 ---
+headline: Le constat
 title: Un lieu nécessaire
 description: "Le travail de livreur est devenu un angle mort des politiques publiques. Face à cette réalité, un besoin simple émerge : un lieu."
 columns: 2
@@ -39,45 +41,31 @@ items:
 ---
 ::
 
-::info-box
+::stats
 ---
-title: L'étude Santé Course
-description: "Face à cette réalité, la Maison des Coursiers a collaboré avec Médecins du Monde et des universitaires afin de dresser un état des lieux objectif de la réalité du métier de livreur dans les plateformes : 1 004 livreurs interrogés à Paris et à Bordeaux, 63 heures de travail par semaine en moyenne, 32 % sans aucune couverture santé, un livreur sur trois qui a renoncé à des soins en douze mois."
-note: "Enquête SANTE-COURSE (IRD, Ined, Médecins du Monde, CoopCycle, 2026), licence CC BY-NC-SA 4.0."
-cta:
-  label: Voir l'étude Santé Course
-  href: https://ird.hal.science/ird-05573116v1
----
-::
-
-::showcase
----
-title: Un réseau pour les livreurs
-description: Des Maisons déjà ouvertes à Paris, Bordeaux et Grenoble, et bientôt dans toute la France.
+dark: true
+headline: "L'étude Santé-Course"
+title: Un métier qui abîme
+description: "En 2025, 1 004 livreurs ont répondu à une grande enquête sur leur travail et leur santé, à Paris et à Bordeaux, avec Médecins du Monde et des chercheurs."
 items:
-  - title: Maison de Paris
-    status: open
-    description: "Ouverte depuis septembre 2021, la Maison des Coursiers est la première Maison de France. Elle accueille les livreurs quatre jours par semaine."
-    meta: 210 rue Saint-Denis, 75002 Paris
-    maison: paris
-  - title: Maison de Bordeaux
-    status: open
-    description: "Ouverte en 2023, la Maison des Livreurs accueille près de 500 livreurs. Ils y trouvent refuge chaque jour, de 14 h à 19 h."
-    meta: 14 rue du Fort Louis, Bordeaux
-    maison: bordeaux
-  - title: Maison de Grenoble
-    status: open
-    description: "Inauguré en juillet 2024 après trois ans de lutte des livreurs, le local d'ADALI est ouvert jour et nuit."
-    meta: 9 avenue Paul Cocat, 38100 Grenoble
-    maison: grenoble
-  - title: Les prochaines ouvertures
-    description: "À Nantes, Strasbourg, Lyon et Marseille, des Maisons des livreurs émergent pour répondre à un besoin simple : avoir un lieu à soi. Un réseau qui se construit ville après ville, avec les livreurs."
-    to: /carte
+  - value: "63 h"
+    label: de travail par semaine, en moyenne
+  - value: "< 6 €"
+    label: brut de l'heure, en moyenne
+  - value: "64 %"
+    label: des livreurs n'ont pas de titre de séjour
+  - value: "45 %"
+    label: disent que leur santé s'est dégradée depuis qu'ils livrent
+cta:
+  label: "Voir les résultats de l'étude"
+  to: /sante-course
+source: "Enquête Santé-Course, IRD, Ined et Médecins du Monde, mars 2026."
 ---
 ::
 
 ::tiles
 ---
+headline: Les services
 title: Un lieu d'appui pour les livreurs
 description: Des services concrets pour répondre aux besoins quotidiens des livreurs et améliorer durablement leurs conditions de travail.
 items:
@@ -102,24 +90,63 @@ items:
 ---
 ::
 
+::showcase
+---
+headline: Le réseau
+title: Un réseau pour les livreurs
+description: Des Maisons déjà ouvertes à Paris, Bordeaux et Grenoble, et bientôt dans toute la France.
+items:
+  - title: Maison de Paris
+    status: open
+    description: "Ouverte depuis septembre 2021, la Maison des Coursiers est la première Maison de France. Elle accueille les livreurs quatre jours par semaine."
+    meta: 210 rue Saint-Denis, 75002 Paris
+    maison: paris
+  - title: Maison de Bordeaux
+    status: open
+    description: "Ouverte en 2023, la Maison des Livreurs accueille près de 500 livreurs. Ils y trouvent refuge chaque jour, de 14 h à 19 h."
+    meta: 14 rue du Fort Louis, Bordeaux
+    maison: bordeaux
+  - title: Maison de Grenoble
+    status: open
+    description: "Inauguré en juillet 2024 après trois ans de lutte des livreurs, le local d'ADALI est ouvert jour et nuit."
+    meta: 9 avenue Paul Cocat, 38100 Grenoble
+    maison: grenoble
+  - title: Les prochaines ouvertures
+    description: "À Nantes, Strasbourg, Lyon et Marseille, des Maisons des livreurs émergent pour répondre à un besoin simple : avoir un lieu à soi. Un réseau qui se construit ville après ville, avec les livreurs."
+    to: /carte
+    mapStatus: prefiguration
+---
+::
+
 ::stats
 ---
+headline: À Paris
 title: Un accompagnement concret
-description: Depuis son ouverture, la Maison des Coursiers de Paris a accompagné des livreurs dans leurs démarches.
+description: "Depuis 2021, la Maison des coursiers de Paris accueille de plus en plus de livreurs. Elle les aide dans leurs démarches, chaque jour."
 items:
-  - value: "+1 700"
-    label: livreurs accompagnés
-  - value: "+30"
-    label: démarches réalisées chaque jour
-  - value: "+200"
-    label: livreurs qui s'organisent
-  - value: "78"
-    label: contrats de travail signés avec accompagnement
+  - value: "1 200+"
+    label: livreurs et livreuses accueillis depuis 2021
+  - value: "650"
+    label: livreurs accompagnés dans leur demande de régularisation
+  - value: "20 à 40"
+    label: livreurs accueillis chaque jour
+  - value: "30"
+    label: démarches par jour en moyenne
+source: "Maison des coursiers de Paris, février 2026."
+---
+::
+
+::statement
+---
+headline: "Vers l'emploi"
+title: "9 livreurs sans titre de séjour sur 10 arrêteraient de livrer à plein temps s'ils étaient régularisés."
+description: "La livraison n'est pas un choix. Les Maisons aident aussi à trouver un emploi stable : ateliers emploi, cours de français et d'informatique. À Lyon, le projet prévoit la découverte des métiers du vélo, de la logistique à vélo et de la réparation."
 ---
 ::
 
 ::faq
 ---
+headline: Questions
 title: FAQ
 description: Les questions les plus courantes pour mieux comprendre la Maison des Coursiers.
 items:
@@ -143,9 +170,9 @@ items:
   - question: Quel est l'impact réel du dispositif ?
     answer: "Depuis son ouverture :"
     points:
-      - Plus de 1700 livreurs ont été accompagnés
+      - Plus de 1 200 livreurs ont été accueillis
+      - 650 livreurs ont été accompagnés dans leur demande de régularisation
       - Environ 30 démarches sont réalisées chaque jour
-      - 78 contrats de travail ont été signés avec accompagnement
       - Un accès aux soins a été mis en place avec des consultations gratuites
     after: "Au-delà des chiffres, la Maison des Coursiers permet de recréer du lien social et de sécuriser des parcours de vie."
   - question: Le lieu est-il ouvert à tous les livreurs, même sans papiers ?

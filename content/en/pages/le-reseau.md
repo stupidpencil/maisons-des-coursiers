@@ -1,20 +1,47 @@
 ---
 title: The network
-description: Vision, missions and values of the Couriers' Houses, and the organisations that run them.
+description: "Vision, missions and values of the Couriers' Houses, and the organisations that run them."
 ---
 
 ::page-hero
 ---
+headline: The network
 title: A network of places serving delivery workers
-description: The Maison des Coursiers is a resource place that supports the emancipation of platform cycle delivery workers.
+description: "The Maison des Coursiers is a resource place that supports the emancipation of platform cycle delivery workers."
+ctas:
+  - label: Find a House
+    to: /carte
+  - label: Start a House
+    mailSubject: I want to start a Maison des coursiers
+    variant: outline
+    icon: i-lucide-mail
+---
+::
+
+::stats
+---
+tinted: true
+items:
+  - value: "3"
+    label: "Houses open: Paris, Bordeaux, Grenoble"
+  - value: "4"
+    label: "Houses in preparation: Nantes, Strasbourg, Lyon, Marseille"
+  - value: "2021"
+    label: first House, opened in Paris
+---
+::
+
+::statement
+---
+headline: Vision
+title: "Taking back control of working conditions, alone and together."
+description: "Delivery workers are isolated. Their working conditions are precarious. There is no dedicated place, and access to rights is hard. The goal is not only social. It is also emancipation."
 ---
 ::
 
 ::feature-grid
 ---
-headline: Vision
-title: Responding to a problem
-description: "Delivery workers are isolated. Their working conditions are precarious. There is no dedicated place, and access to rights is hard. The goal is not only social. It is also emancipation: helping delivery workers take back control of their working conditions, alone and together."
+variant: plain
 items:
   - icon: i-lucide-house
     title: A real place
@@ -28,28 +55,24 @@ items:
 ---
 ::
 
-::feature-grid
+::numbered-list
 ---
 headline: Missions
 title: Three functions
 items:
-  - icon: i-lucide-armchair
-    title: Meet immediate needs
+  - title: Meet immediate needs
     description: Rest area, toilets, phone charging, shelter from bad weather. Concrete improvements to daily working conditions.
-  - icon: i-lucide-scale
-    title: Guide and defend rights
+  - title: Guide and defend rights
     description: Support with social and administrative rights, help with account deactivations, legal information, referral to partners.
-  - icon: i-lucide-users-round
-    title: Encourage collective organisation
+  - title: Encourage collective organisation
     description: Connecting delivery workers, supporting collective structures, training, and the emergence of cooperatives and collectives.
 ---
 ::
 
-::feature-grid
+::dark-features
 ---
 headline: Values
 title: What guides us
-columns: 2
 items:
   - icon: i-lucide-heart-handshake
     title: Unconditional humanism
@@ -66,18 +89,59 @@ items:
 ---
 ::
 
-## Who runs the Houses
+::timeline
+---
+headline: History
+title: How the network was built
+description: "Each House comes from a local mobilisation: delivery workers' collectives, associations, elected officials and local authorities."
+items:
+  - date: "2020"
+    title: A place of rest and support in Paris
+    description: Elected officials of the City of Paris and CoopCycle Association imagine a place of rest and support for delivery workers.
+  - date: September 2021
+    title: The first Maison des Coursiers opens in Paris
+    description: "It is launched by CoopCycle Association, a separate body from the CoopCycle federation."
+  - date: "2023"
+    title: The Maison des Livreurs opens in Bordeaux
+    description: It comes from the delivery workers' collective AMAL and the associations EtuRécup, Médecins du Monde and CoopCycle.
+  - date: July 2024
+    title: ADALI's space opens in Grenoble
+    description: After three years of struggle by Grenoble delivery workers, a space open day and night.
+  - date: July 2025
+    title: The Nantes association is created
+    description: The Maison des Livreurs of Nantes is preparing to open its place, planned for September 2026.
+  - date: Today
+    title: Strasbourg, Lyon and Marseille are getting ready
+    description: New Houses are being prepared, with delivery workers and associations in each city.
+---
+::
 
-The first Maison des Coursiers (Couriers' House) was launched in Paris in 2021 by CoopCycle Association. This is a separate body from the CoopCycle federation. A Maison des Livreurs (Delivery Workers' House) then opened in Bordeaux, run by a group of local organisations. These places are also linked to delivery workers' collectives:
+::feature-grid
+---
+variant: plain
+headline: Delivery workers' collectives
+title: Delivery workers are organising
+description: "The Houses are linked to collectives formed by delivery workers themselves. They speak for delivery workers. This website does not replace their voice."
+columns: 2
+items:
+  - icon: i-lucide-users-round
+    title: CIEL, in Paris
+    description: "Collective for the inclusion and emancipation of delivery workers. It co-manages the Maison des Coursiers with CoopCycle Association and CASP: more than 200 members, drop-in sessions and advocacy work."
+  - icon: i-lucide-users-round
+    title: AMAL, in Bordeaux
+    description: "Association to mobilise and support delivery workers. The collective is behind the Maison des Livreurs of Bordeaux."
+---
+::
 
-- **CIEL** (Collectif pour l'insertion et l'émancipation des livreurs, a collective for the inclusion and emancipation of delivery workers), formed in Paris and co-manager of the Maison des Coursiers.
-- **AMAL** (Association de mobilisation et d'accompagnement des livreurs, an association to mobilise and support delivery workers), formed in Bordeaux.
-
-They speak for delivery workers. This website does not replace their voice.
-
-## Go further
-
-The Houses also work on other alternatives to platforms, such as a delivery workers' cooperative and a local delivery platform. To learn more, [write to the team](/en/contact).
+::info-box
+---
+title: Beyond the Houses, alternatives to platforms
+description: "The Houses also work on other alternatives, such as a delivery workers' cooperative and a local delivery platform. To learn more, write to the team."
+cta:
+  label: Write to the team
+  to: /contact
+---
+::
 
 ::cta-band
 ---

@@ -6,7 +6,7 @@ description: "Information and referrals for platform delivery workers and the pe
 ::page-hero
 ---
 title: Resources for delivery workers and the people who support them
-description: Five topics, with the services you can find in the Houses and in partner organisations.
+description: The services you can find in the Houses and in partner organisations, and step-by-step guides.
 ---
 ::
 
