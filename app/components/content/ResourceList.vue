@@ -16,8 +16,23 @@ const { data: items } = await useAsyncData(() => `resources-list-${locale.value}
 const selected = ref<NonNullable<typeof items.value>[number] | null>(null)
 const open = computed({
   get: () => selected.value !== null,
-  set: (v: boolean) => { if (!v) selected.value = null }
+  set: (v: boolean) => {
+    if (!v) {
+      selected.value = null
+      fullscreen.value = false
+    }
+  }
 })
+
+// Bouton « plein écran » : utile pour suivre un guide pas à pas sur téléphone ou ordinateur.
+const fullscreen = ref(false)
+const modalUi = computed(() => ({
+  content: fullscreen.value ? '' : 'max-w-2xl max-h-[85dvh] sm:max-h-[85dvh]',
+  header: 'shrink-0 items-start py-4 pe-24',
+  title: 'text-2xl font-bold text-balance',
+  body: 'min-h-0 overflow-y-auto',
+  footer: 'shrink-0'
+}))
 </script>
 
 <template>
@@ -41,11 +56,23 @@ const open = computed({
       v-model:open="open"
       :title="selected?.title"
       :description="selected?.description"
-      :ui="{ content: 'max-w-2xl max-h-[85dvh] sm:max-h-[85dvh]', header: 'shrink-0 items-start py-4 pe-14', title: 'text-2xl font-bold text-balance', body: 'min-h-0 overflow-y-auto', footer: 'shrink-0' }"
+      :fullscreen="fullscreen"
+      :ui="modalUi"
     >
+      <template #actions>
+        <UButton
+          :icon="fullscreen ? 'i-lucide-minimize-2' : 'i-lucide-maximize-2'"
+          :aria-label="fullscreen ? t('resources.exitFullscreen') : t('resources.fullscreen')"
+          :title="fullscreen ? t('resources.exitFullscreen') : t('resources.fullscreen')"
+          color="neutral"
+          variant="ghost"
+          class="absolute end-12 top-4"
+          @click="fullscreen = !fullscreen"
+        />
+      </template>
       <template #body>
         <template v-if="selected">
-          <ContentRenderer :value="shiftHeadings(introAsNote(selected), 1)" />
+          <ContentRenderer :value="shiftHeadings(introAsNote(selected), 1)" :class="fullscreen ? 'mx-auto max-w-3xl' : ''" />
         </template>
       </template>
     </UModal>

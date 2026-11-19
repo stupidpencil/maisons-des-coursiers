@@ -51,7 +51,9 @@
   "resources": {
     "back": "All resources",
     "open": "Read",
-    "openPage": "Open as a page"
+    "openPage": "Open as a page",
+    "fullscreen": "Open full screen",
+    "exitFullscreen": "Exit full screen"
   },
   "contact": {
     "address": "Network address",
@@ -69,7 +71,7 @@
     "copy": "Copy",
     "copiedShort": "Copied",
     "copied": "Address copied",
-    "subject": "Suggested subject",
+    "subject": "We suggest you mention",
     "openMail": "Open my email app",
     "safety": "For your safety, do not mention your immigration status in this first message."
   }

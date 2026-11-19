@@ -44,7 +44,8 @@ const facts = computed(() => {
   const s = selected.value
   if (!s) return []
   return [
-    { icon: 'i-lucide-map-pin', label: t('maison.address'), value: s.m.address ?? s.m.city },
+    // Sans adresse précise (precision: city), on n'affiche pas de bloc Adresse.
+    s.m.precision !== 'city' && { icon: 'i-lucide-map-pin', label: t('maison.address'), value: s.m.address ?? s.m.city },
     s.page?.hours && { icon: 'i-lucide-clock', label: t('maison.hours'), value: s.page.hours },
     s.m.opened && { icon: 'i-lucide-calendar', label: t('maison.opened'), value: s.m.opened }
   ].filter(Boolean) as { icon: string, label: string, value: string }[]
@@ -70,7 +71,7 @@ function writeAbout(name: string) {
           {{ t(`status.${selected.m.status}`) }}
         </UBadge>
 
-        <dl class="mt-4 grid gap-3 sm:grid-cols-3">
+        <dl v-if="facts.length" class="mt-4 grid gap-3 sm:grid-cols-3">
           <div v-for="f in facts" :key="f.label" class="rounded-lg border border-default p-3">
             <dt class="flex items-center gap-2 text-xs text-muted">
               <UIcon :name="f.icon" class="size-4" />{{ f.label }}
@@ -80,9 +81,6 @@ function writeAbout(name: string) {
             </dd>
           </div>
         </dl>
-        <p v-if="selected.m.precision === 'city'" class="mt-3 text-sm text-muted">
-          {{ t('map.approxCity') }}
-        </p>
 
         <div v-if="selected.page" class="mt-6">
           <ContentRenderer :value="shiftHeadings(introAsNote(selected.page), 1)" />

@@ -51,7 +51,9 @@
   "resources": {
     "back": "Toutes les ressources",
     "open": "Consulter",
-    "openPage": "Ouvrir sur une page"
+    "openPage": "Ouvrir sur une page",
+    "fullscreen": "Ouvrir en plein écran",
+    "exitFullscreen": "Quitter le plein écran"
   },
   "contact": {
     "address": "Adresse du réseau",
@@ -69,7 +71,7 @@
     "copy": "Copier",
     "copiedShort": "Copiée",
     "copied": "Adresse copiée",
-    "subject": "Objet conseillé",
+    "subject": "Nous vous conseillons de mentionner",
     "openMail": "Ouvrir ma messagerie",
     "safety": "Pour votre sécurité, n'écrivez pas votre situation administrative dans ce premier message."
   }

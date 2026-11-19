@@ -35,7 +35,8 @@ const facts = computed(() => {
   const m = maison.value!
   const p = page.value
   return [
-    { icon: 'i-lucide-map-pin', label: t('maison.address'), value: m.address ?? m.city },
+    // Sans adresse précise (precision: city), on n'affiche pas de bloc Adresse.
+    m.precision !== 'city' && { icon: 'i-lucide-map-pin', label: t('maison.address'), value: m.address ?? m.city },
     p?.hours && { icon: 'i-lucide-clock', label: t('maison.hours'), value: p.hours },
     m.opened && { icon: 'i-lucide-calendar', label: t('maison.opened'), value: m.opened }
   ].filter(Boolean) as { icon: string, label: string, value: string }[]
@@ -61,7 +62,7 @@ const facts = computed(() => {
       {{ page.description }}
     </p>
 
-    <dl class="mt-8 grid gap-4 sm:grid-cols-3">
+    <dl v-if="facts.length" class="mt-8 grid gap-4 sm:grid-cols-3">
       <div v-for="f in facts" :key="f.label" class="rounded-lg border border-default p-4">
         <dt class="flex items-center gap-2 text-sm text-muted">
           <UIcon :name="f.icon" class="size-4" />{{ f.label }}
@@ -71,9 +72,6 @@ const facts = computed(() => {
         </dd>
       </div>
     </dl>
-    <p v-if="maison!.precision === 'city'" class="mt-3 text-sm text-muted">
-      {{ t('map.approxCity') }}
-    </p>
 
     <div v-if="page" class="prose prose-neutral mt-8 max-w-3xl dark:prose-invert">
       <ContentRenderer :value="page" />

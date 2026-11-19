@@ -130,25 +130,11 @@ items:
   - icon: i-lucide-users-round
     title: AMAL, à Bordeaux
     description: "Association de mobilisation et d'accompagnement des livreurs. Le collectif est à l'origine de la Maison des Livreurs de Bordeaux."
----
-::
-
-::info-box
----
-title: Au-delà des Maisons, des alternatives aux plateformes
-description: "Les Maisons travaillent aussi sur d'autres alternatives, comme une coopérative de livreurs et une plateforme locale de livraison. Pour en savoir plus, écrivez à l'équipe."
-cta:
-  label: Écrire à l'équipe
-  to: /contact
----
-::
-
-::cta-band
----
-title: Vous voulez lancer une Maison dans votre ville ?
-description: Nous pouvons partager notre expérience, mettre en lien avec les Maisons existantes et conseiller sur le montage du projet.
+afterTitle: "Au-delà des Maisons, des alternatives aux plateformes"
+after: "Les Maisons travaillent aussi sur d'autres alternatives, comme une coopérative de livreurs et une plateforme locale de livraison."
 ctas:
-  - label: Écrire à l'équipe
-    mailSubject: Je veux lancer une Maison des coursiers
+  - label: "Écrire à l'équipe"
+    mailSubject: "Alternatives aux plateformes"
+    variant: outline
 ---
 ::

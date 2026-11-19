@@ -130,25 +130,11 @@ items:
   - icon: i-lucide-users-round
     title: AMAL, in Bordeaux
     description: "Association to mobilise and support delivery workers. The collective is behind the Maison des Livreurs of Bordeaux."
----
-::
-
-::info-box
----
-title: Beyond the Houses, alternatives to platforms
-description: "The Houses also work on other alternatives, such as a delivery workers' cooperative and a local delivery platform. To learn more, write to the team."
-cta:
-  label: Write to the team
-  to: /contact
----
-::
-
-::cta-band
----
-title: Do you want to start a House in your city?
-description: We can share our experience, connect you with existing Houses and advise on setting up the project.
+afterTitle: "Beyond the Houses, alternatives to platforms"
+after: "The Houses also work on other alternatives, such as a delivery workers' cooperative and a local delivery platform."
 ctas:
-  - label: Write to the team
-    mailSubject: I want to start a Maison des coursiers
+  - label: "Write to the team"
+    mailSubject: "Alternatives to platforms"
+    variant: outline
 ---
 ::
